@@ -1,1 +1,1 @@
-db.produtos.find({}, { nome: 1, vendidos: 1, _id: false }).limit(1);
+db.produtos.find({}, { nome: 1, vendidos: 1, _id: 0 }).limit(1);
