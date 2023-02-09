@@ -150,3 +150,10 @@ db.produtos.find({},
 
 use("commerce")
 db.produtos.findOne({});
+
+// Req 30
+use("commerce")
+db.produtos.updateOne({ nome: "Big Mac"}, { $unset: { curtidas: "" }});
+
+use("commerce")
+db.produtos.find({ curtidas: { $exists: true }}, { nome: 1, _id: 0});
